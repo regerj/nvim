@@ -3,7 +3,6 @@ local setup = function ()
     vim.api.nvim_create_autocmd("BufReadPost", {
         pattern = "*",
         callback = function ()
-            print("hello there")
             vim.treesitter.start()
         end,
         once = true,

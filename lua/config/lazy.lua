@@ -18,15 +18,13 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-vim.cmd("colorscheme habamax")
-
 require("lazy").setup({
     spec = {
 	-- Imports our plugins
         { import = "plugins" },
     },
     -- colorscheme that will be used when installing plugins
-    install = { colorscheme = { "habamax" } },
+    install = { colorscheme = { "tokyonight-night" } },
     -- automatically check for plugin updates
     checker = { enabled = true },
 })
@@ -34,3 +32,5 @@ require("lazy").setup({
 require("config.keybinds")
 require("config.lsp")
 require("config.opt")
+
+vim.cmd("colorscheme tokyonight-night")

@@ -33,4 +33,5 @@ require("config.keybinds")
 require("config.lsp")
 require("config.opt")
 
+require("vim._core.ui2").enable({})
 vim.cmd("colorscheme tokyonight-night")

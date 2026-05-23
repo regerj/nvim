@@ -40,3 +40,13 @@ vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition)
 vim.keymap.set("n", "<leader>ra", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>lf", vim.diagnostic.open_float)
+
+--------------------------------------------------------------------------------
+--- terminal
+--------------------------------------------------------------------------------
+-- <D> matches MAC command key
+-- cannot hide terminal yet...
+vim.keymap.set("n", "<D-i>", "<cmd>ToggleTerm direction=float<CR>")
+vim.keymap.set("n", "<A-i>", "<cmd>ToggleTerm direction=float<CR>")
+vim.keymap.set("i", "<D-i>", "<cmd>ToggleTerm direction=float<CR>")
+vim.keymap.set("i", "<A-i>", "<cmd>ToggleTerm direction=float<CR>")

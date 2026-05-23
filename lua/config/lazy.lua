@@ -1,3 +1,4 @@
+-- boilerplate lazy.nvim setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -15,6 +16,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- setting leaders
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -29,9 +31,12 @@ require("lazy").setup({
     checker = { enabled = true },
 })
 
+-- execute our configs
 require("config.keybinds")
 require("config.lsp")
 require("config.opt")
 
+-- ui2 is used by tiny-cmdline
 require("vim._core.ui2").enable({})
+
 vim.cmd("colorscheme tokyonight-night")

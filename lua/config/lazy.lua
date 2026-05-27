@@ -39,4 +39,12 @@ require("config.opt")
 -- ui2 is used by tiny-cmdline
 require("vim._core.ui2").enable({})
 
+-- make treesitter run
+vim.api.nvim_create_autocmd("BufReadPost", {
+    pattern = "*",
+    callback = function ()
+        vim.treesitter.start()
+    end,
+})
+
 vim.cmd("colorscheme tokyonight-night")

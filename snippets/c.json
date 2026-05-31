@@ -1,0 +1,17 @@
+{
+    "Kernel Doc": {
+        "prefix": ["kdoc"],
+        "body": [
+            "/**",
+            " * ${1:function_name}() - ${2:Brief description of function.}",
+            " * @${3:arg1}: ${4:Describe the first argument.}",
+            " *",
+            " * ${5:A longer description.}",
+            " *",
+            " * Context: ${6:Describes whether the function can sleep, what locks it takes, etc}",
+            " * Return: ${7:Describe the return value of function_name.}",
+            " */",
+            "${0}"],
+        "description": "A kernel-style doc comment."
+    }
+}

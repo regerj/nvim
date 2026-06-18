@@ -48,3 +48,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 vim.cmd("colorscheme tokyonight-night")
+
+-- show lsp status on statusline
+-- vim.api.nvim_create_autocmd('LspProgress', { command = 'redrawstatus' })

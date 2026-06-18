@@ -1,3 +1,8 @@
+require("config.opt")
+
+-- ui2 is used by tiny-cmdline
+require("vim._core.ui2").enable({})
+
 -- boilerplate lazy.nvim setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -34,10 +39,6 @@ require("lazy").setup({
 -- execute our configs
 require("config.keybinds")
 require("config.lsp")
-require("config.opt")
-
--- ui2 is used by tiny-cmdline
-require("vim._core.ui2").enable({})
 
 -- make treesitter run
 vim.api.nvim_create_autocmd("BufReadPost", {

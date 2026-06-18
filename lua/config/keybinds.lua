@@ -15,6 +15,10 @@ vim.keymap.set("i", "[", "[]<left>")
 vim.keymap.set("i", "\"", "\"\"<left>")
 vim.keymap.set("i", "'", "''<left>")
 
+-- move up and move down visual lines
+vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
+vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
+
 --------------------------------------------------------------------------------
 --- nvim-tree
 --------------------------------------------------------------------------------
